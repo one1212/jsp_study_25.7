@@ -1,10 +1,8 @@
-package koreaIT;
+package koreaIT.servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ArticleListServlet")
+import koreaIT.util.DBUtil;
+import koreaIT.util.SecSql;
+
+@WebServlet("/article/list")
 public class ArticleListServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -23,8 +24,6 @@ public class ArticleListServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 
 		Connection conn = null;
-		PreparedStatement pstmt = null;
-        ResultSet rs = null;
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
