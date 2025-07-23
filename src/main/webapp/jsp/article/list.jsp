@@ -29,10 +29,11 @@ table>thead>tr>th, table>tbody>tr>td {
 
 	<a href="../home/main">메인으로 이동</a>
 	<div>
-	<a href="write">글쓰기</a></div>
+		<a href="write">글쓰기</a>
+	</div>
 
 	<h2>게시글 목록</h2>
-	
+
 
 	<div>
 		총 게시글 수 :
@@ -50,6 +51,7 @@ table>thead>tr>th, table>tbody>tr>td {
 				<th>제목</th>
 				<th>내용</th>
 				<th>삭제</th>
+				<th>수정</th>
 			</tr>
 		</thead>
 
@@ -64,6 +66,7 @@ table>thead>tr>th, table>tbody>tr>td {
 				<td><a href="detail?id=<%=articleRow.get("id")%>"><%=articleRow.get("title")%></a></td>
 				<td><%=articleRow.get("body")%></td>
 				<td><a href="delete?id=<%=articleRow.get("id")%>">삭제</a></td>
+				<td><a href="modify?id=<%=articleRow.get("id")%>">수정</a></td>
 			</tr>
 
 			<%
@@ -77,9 +80,10 @@ table>thead>tr>th, table>tbody>tr>td {
 
 	<style>
 .page {
-	text-align : center;
-	margin-top : 20px;
+	text-align: center;
+	margin-top: 20px;
 }
+
 .page>a {
 	color: black;
 	text-decoration: none;

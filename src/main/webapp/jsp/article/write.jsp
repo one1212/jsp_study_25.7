@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -9,6 +8,9 @@
 <title>article write</title>
 </head>
 <body>
+
+<a href="../home/main">메인으로 이동</a>
+<a href="list">리스트로 돌아가기</a>
 
 <h2>글쓰기</h2>
 
